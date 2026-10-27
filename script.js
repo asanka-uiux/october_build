@@ -517,12 +517,18 @@
   ptabs.forEach(function(t){
     t.addEventListener('click', function(){
       ptabs.forEach(function(x){ x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+      var row = t.parentElement;
+      if (row.scrollWidth > row.clientWidth){
+        var x = t.offsetLeft - row.offsetLeft - (row.clientWidth - t.offsetWidth) / 2;
+        row.scrollTo({ left: x, behavior: REDUCE ? 'auto' : 'smooth' });
+      }
       setCat(t.dataset.cat);
     });
   });
   function keepGridInView(){
     var g = el('pgrid').getBoundingClientRect();
-    if (g.top < 0) window.scrollTo({ top: el('pgrid').offsetTop - 90, behavior: 'smooth' });
+    // page coordinates: offsetTop is relative to the section, which sent the page back to the top
+    if (g.top < 0) window.scrollTo({ top: window.scrollY + g.top - 90, behavior: 'smooth' });
   }
   el('pgPrev').addEventListener('click', function(){
     pgPage--; drawPage(); keepGridInView();
