@@ -562,6 +562,20 @@ h1.display .l2{display:block;color:var(--red-hot)}
   .hero__in .wrap{display:flex;flex-direction:column;width:100%;padding-top:24px;padding-bottom:24px}
   .hero .stamp{margin-top:auto}
   .hero__actions{margin-top:auto;padding-top:24px}
+  /* build dates: one swipeable row of every day; side padding lets day 1 and FP 6.0 reach the centre */
+  .daystage{
+    display:flex;align-items:center;justify-content:flex-start;gap:12px;
+    overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:none;
+    padding:22px calc(50% - clamp(75px,11.5vw,165px)) 18px;
+  }
+  .daystage::-webkit-scrollbar{display:none}
+  .daystage::before{display:none}
+  .dayside,.dayside:empty{display:flex;flex:none;gap:12px}
+  .dayside:empty{display:none}
+  .dayhero{flex:none;scroll-snap-align:center}
+  .daytile{transform:none;opacity:.85;scroll-snap-align:center;width:64px;font-size:64px}
+  /* the phone crop puts bright smoke behind the headline, so the scrim is darkest through the copy band */
+  .hero__bg::after{background:linear-gradient(to bottom,rgba(10,10,11,.5) 0%,rgba(10,10,11,.84) 20%,rgba(10,10,11,.84) 64%,rgba(10,10,11,.6) 78%,var(--ink) 100%)}
 }
 
 /* 1041px+: desktop nav, and the full-screen hero */

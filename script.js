@@ -131,7 +131,8 @@
   /* How many small dates fit either side of the hero at this width. Measured
      rather than guessed from a breakpoint, so the clamps can change freely. */
   var SIDE_MAX = 2;   // dates shown either side of the hero
-  var stacked = function(){ return window.matchMedia('(max-width:374px)').matches; };
+  var swipe = function(){ return window.matchMedia('(max-width:767px)').matches; };
+  var stacked = function(){ return !swipe() && window.matchMedia('(max-width:374px)').matches; };
 
   // Measure a real tile rather than re-deriving the CSS clamp in JS. The
   // probe is laid out once per render, which only happens on a day change
@@ -149,6 +150,7 @@
   }
 
   function sideCount(){
+    if (swipe()) return DAYS.length;   // phones: every date in one swipeable row
     var stage = el('daystage');
     var avail = stage.clientWidth;
     var gap   = parseFloat(getComputedStyle(stage).columnGap) || 0;
@@ -208,6 +210,12 @@
       w = n * tw + (n - 1) * gap;
     }
     el('daystage').style.setProperty('--sidew', w + 'px');
+  }
+
+  function centerHero(smooth){
+    if (!swipe()) return;
+    var s = el('daystage');
+    s.scrollTo({ left: hero.offsetLeft + hero.offsetWidth / 2 - s.clientWidth / 2, behavior: smooth && !REDUCE ? 'smooth' : 'auto' });
   }
 
   function fillHero(){
@@ -309,6 +317,7 @@
     if (changed){
       fillHero();
       renderSides();
+      centerHero(true);
       popSp.x = 0.9; popSp.v = 0; popSp.done = false;   // dip, then spring back
       popSp.to(1, CFG.pop);
     }
@@ -333,6 +342,7 @@
     clearTimeout(rt);
     rt = setTimeout(function(){
       renderSides();
+      centerHero(false);
       measure(false);
       if (OPEN) openSp.snap(1);
       render();
