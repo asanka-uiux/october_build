@@ -556,6 +556,12 @@ h1.display .l2{display:block;color:var(--red-hot)}
   h1.display{font-size:2.8rem}
   .hero__actions{flex-direction:column-reverse}
   .hero__actions .btn{width:100%}
+  /* buttons sit on the bottom edge; the auto margins keep the copy centred in the space above them */
+  .hero{align-items:stretch}
+  .hero__in{display:flex}
+  .hero__in .wrap{display:flex;flex-direction:column;width:100%;padding-top:24px;padding-bottom:24px}
+  .hero .stamp{margin-top:auto}
+  .hero__actions{margin-top:auto;padding-top:24px}
 }
 
 /* 1041px+: desktop nav, and the full-screen hero */
