@@ -551,6 +551,13 @@ h1.display .l2{display:block;color:var(--red-hot)}
   .jump{display:none}
 }
 
+/* phones only (up to 767px): bigger headline, stacked full-width buttons */
+@media(max-width:767px){
+  h1.display{font-size:2.8rem}
+  .hero__actions{flex-direction:column-reverse}
+  .hero__actions .btn{width:100%}
+}
+
 /* 1041px+: desktop nav, and the full-screen hero */
 @media(min-width:1041px){
   .nav__links{display:flex}
