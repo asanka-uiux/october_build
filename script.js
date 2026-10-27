@@ -424,14 +424,14 @@
     }, 100);
   });
 
-  // boot: the hero shows day one, shut on wider screens, already open on phones
+  // boot: the hero shows day one, already open
   fillHero();
   renderSides();
   centerHero(false);
   fillPanel();
   panel.toggleAttribute('inert', true);
   measure(false);
-  if (swipe()){ setOpen(true); openSp.snap(1); }
+  setOpen(true); openSp.snap(1);
   render();
 
   /* ============ FINANCING MODAL ============ */
