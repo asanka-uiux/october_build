@@ -614,6 +614,7 @@ h1.display .l2{display:block;color:var(--red-hot)}
   .hero__bg::after{background:linear-gradient(to right,rgba(10,10,11,.8) 0%,rgba(10,10,11,.55) 28%,rgba(10,10,11,0) 50%),linear-gradient(to top,var(--ink) 0%,rgba(10,10,11,0) 22%)}
   .hero__in{padding:0}
   .hero__sub{max-width:48ch}
+  .q__body p{max-width:120ch}
 }
 
 
