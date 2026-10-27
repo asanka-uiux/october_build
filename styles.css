@@ -567,7 +567,11 @@ h1.display .l2{display:block;color:var(--red-hot)}
   h1.display{font-size:2.8rem}
   .hero__actions{flex-direction:column-reverse}
   .hero__actions .btn{width:100%}
-  .shopall .btn{width:100%}
+  .shopall .btn,.bgrid + div .btn,.next__row .btn{width:100%}
+  /* blogs: one swipeable row, each card 82% wide so the next one peeks in; bleeds over .wrap's 28px gutter */
+  .bgrid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;gap:14px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:-28px;padding:4px 28px 8px;scroll-padding-inline:28px}
+  .bgrid::-webkit-scrollbar{display:none}
+  .bcard{scroll-snap-align:start}
   /* buttons sit on the bottom edge; the auto margins keep the copy centred in the space above them */
   .hero{align-items:stretch}
   .hero__in{display:flex}
