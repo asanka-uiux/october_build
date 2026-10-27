@@ -79,7 +79,7 @@ h2.display{font-size:clamp(2.1rem,4.4vw,3.6rem)}
 .stamp b{color:var(--red-hot);font-weight:600}
 h1.display{text-shadow:0 3px 28px rgba(0,0,0,.55)}
 h1.display .l2{display:block;color:var(--red-hot)}
-.hero__sub{margin-top:18px;max-width:58ch;font-size:.97rem;color:#C9C9D1;text-shadow:0 1px 14px rgba(0,0,0,.8)}
+.hero__sub{margin-top:18px;max-width:58ch;font-size:.97rem;color:#ffffff;text-shadow:0 1px 14px rgba(0,0,0,.8)}
 .hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 
 /* ---------- jump band ---------- */
@@ -608,12 +608,14 @@ h1.display .l2{display:block;color:var(--red-hot)}
   .nav__cta{margin-left:0}
 
   .hero{height:calc(100vh - var(--navh));height:calc(100svh - var(--navh));min-height:560px;align-items:center}
-  /* hero_bg.png carries its own fade to black on the left, so it
-     runs full width and anchors right to keep the truck in frame */
-  .hero__bg img{object-position:100% 60%}
-  .hero__bg::after{background:linear-gradient(to right,rgba(10,10,11,.8) 0%,rgba(10,10,11,.55) 28%,rgba(10,10,11,0) 50%),linear-gradient(to top,var(--ink) 0%,rgba(10,10,11,0) 22%)}
+  /* october_bg2.png carries its own fade to black on the left; it runs full width with no scrim, anchored right so
+     the truck stays in frame, and only the bottom edge fades into the next section */
+  /* the 48px slide (half a CSS inch) pushes the image's built-in fade further right; the strip it uncovers is filled with the image's own edge black (#010102) so there's no seam */
+  .hero__bg{background:#010102}
+  .hero__bg img{object-position:100% 60%;transform:translateX(48px)}
+  .hero__bg::after{background:linear-gradient(to top,var(--ink) 0%,rgba(10,10,11,0) 22%)}
   .hero__in{padding:0}
-  .hero__sub{max-width:48ch}
+  .hero__sub{max-width:42ch}
   .q__body p{max-width:120ch}
 }
 
