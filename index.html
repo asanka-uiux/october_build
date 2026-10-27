@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A $12,000 Sierra 1500 Built for FP Truck Fest 6.0 | Custom Offsets</title>
+<meta name="description" content="A 2006 GMC Sierra 1500 SLT, bought on Facebook Marketplace for $12,000 and built into a burnout truck in 11 days for FP Truck Fest 6.0 in Tennessee.">
+<meta property="og:title" content="A $12,000 Sierra 1500 Built for FP Truck Fest 6.0 | Custom Offsets">
+<meta property="og:description" content="A 2006 GMC Sierra 1500 SLT, bought for $12,000 and built into a burnout truck for FP Truck Fest 6.0.">
+<meta property="og:image" content="images/og-share.jpg">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav">
+  <div class="nav__in">
+    <a class="brand" href="#top"><img src="images/logo.png" alt="Custom Offsets"></a>
+    <div class="nav__links">
+      <a href="#meter">The Build</a>
+      <a href="#bnpl">Buy Now, Pay Later</a>
+      <a href="#parts">Parts</a>
+      <a href="#watch">Watch</a>
+      <a href="#story">Story</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="nav__cta" href="#parts">Shop the Build</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</nav>
+
+<main id="main" tabindex="-1">
+<!-- ===================== HERO =====================
+     ART: swap .hero__bg--ph for <img src="images/hero-burnout.jpg">.
+     Wants a wide landscape plate, roughly 4000x1250, truck centered. -->
+<header class="hero" id="top">
+  <div class="hero__bg">
+    <picture>
+      <source media="(min-width:1041px)" srcset="images/hero_bg.png">
+      <img src="images/hero-burnout.webp" alt="The 2006 GMC Sierra 1500 SLT laying down a burnout in front of the crowd at FP Truck Fest" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero__in">
+    <div class="wrap">
+      <div class="stamp">Build Feature <b>.</b> 2006 GMC Sierra 1500 SLT</div>
+      <h1 class="display">A $12K truck,<br>built in 11 days,<span class="l2">for FP Truck Fest 6.0.</span></h1>
+      <p class="hero__sub">
+        We bought a 2006 GMC Sierra 1500 SLT with the VortecMAX 6.0 off Facebook Marketplace for $12,000.
+        We gave ourselves eleven days to turn it into a burnout truck for FP Truck Fest 6.0 in Jamestown,
+        Tennessee.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#meter">See the build</a>
+        <a class="btn btn--ghost" href="#parts">See every part</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== JUMP BAND ===================== -->
+<nav class="jump" aria-label="Page sections">
+  <div class="jump__in">
+    <a href="#meter">The Build</a>
+    <a href="#bnpl">Buy Now, Pay Later</a>
+    <a href="#parts">Full Parts List</a>
+    <a href="#watch">Watch It Now</a>
+    <a href="#story">The Build Story</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<!-- ===================== THE BURNOUT METER ===================== -->
+<section class="sec meter" id="meter">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">The build, day by day</div>
+      <h2 class="display">How it came<br><span class="red">together.</span></h2>
+      <p class="lede" style="margin-top:20px">
+        Select the date in the middle to open that day's photo and notes, then move through the smaller dates
+        on either side until you reach the show.
+      </p>
+    </div>
+
+    <div class="mbox rv">
+      <div class="daystage" id="daystage">
+        <div class="dayside dayside--l" id="sideL"></div>
+
+        <button class="dayhero" id="dayhero" type="button" aria-expanded="false" aria-controls="dayPanel">
+          <span class="dayhero__glow" aria-hidden="true"><span class="dayhero__glowi"></span></span>
+          <span class="dayhero__ring" aria-hidden="true"></span>
+          <span class="dayhero__tag" data-role="heroTag" aria-hidden="true"></span>
+          <span class="dayhero__face"><span class="dayhero__in">
+            <span class="dayhero__head"><span class="dayhero__hk" data-role="heroHead">Day</span></span>
+            <span class="dayhero__strip"></span>
+            <span class="dayhero__body"><span class="dayhero__n" data-role="heroNum"></span></span>
+            <span class="dayhero__foot">
+              <span class="dayhero__rule"></span>
+              <span class="dayhero__t" data-role="heroTitle"></span>
+            </span>
+            <span class="dayhero__cta">
+              <span data-role="heroCta">Open this day</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </span></span>
+        </button>
+
+        <div class="dayside dayside--r" id="sideR"></div>
+      </div>
+
+      <div class="opener" id="dayPanel" role="region" aria-label="The day you picked">
+        <div class="opener__in">
+          <div class="detail" id="detail">
+          <div class="detail__vis">
+            <span class="detail__badge" data-role="badge"></span>
+            <img data-role="dayimg" alt="" hidden>
+            <div class="ph" data-role="ph" aria-hidden="true"><b data-role="phb"></b></div>
+          </div>
+          <div class="detail__body">
+            <div class="detail__k" data-role="cat"></div>
+            <div class="detail__name" data-role="name"></div>
+            <div class="detail__brand" data-role="brand"></div>
+  
+            <div class="clock">
+              <div class="clock__scale" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="clock__r">
+                <div class="clock__v" data-role="left"></div>
+                <div class="clock__k"><b>Day 1</b><i></i><b>Gates open</b></div>
+              </div>
+            </div>
+  
+            <div class="rows">
+              <div class="row"><div class="row__k" data-role="kWent">What went on</div><div class="row__v" data-role="went"></div></div>
+              <div class="row"><div class="row__k" data-role="kWhy">Why it happened on this day</div><div class="row__v" data-role="why"></div></div>
+              <div class="row"><div class="row__k" data-role="kFought">What slowed it down</div><div class="row__v" data-role="fought"></div></div>
+            </div>
+  
+            <div class="detail__cta">
+              <a class="btn btn--primary btn--wide" href="#parts">See the parts that went on</a>
+            </div>
+          </div>
+          </div>
+          <div class="showstrip" id="showstrip" hidden>
+            <div class="showgrid">
+              <div class="showgrid__c"><img src="images/show-1.webp" alt="The truck laying down a burnout after dark with the crowd lining the rail" loading="lazy"></div>
+              <div class="showgrid__c"><img src="images/show-2.webp" alt="Flames under the rear bumper and an extinguisher on hand at the end of a run" loading="lazy"></div>
+              <div class="showgrid__c"><img src="images/show-3.webp" alt="The Sierra smoking the rear tires in burnout alley with riders in the bed" loading="lazy"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BUY NOW PAY LATER ===================== -->
+<section class="sec bnpl" id="bnpl" style="padding-top:0">
+  <div class="wrap">
+    <div class="finbanner rv">
+      <div class="finbanner__k">Buy now, pay later</div>
+      <div class="finbanner__t">Build now. Pay over time.</div>
+      <p class="finbanner__p">
+        Two ways to spread out the build: finance through Affirm as low as 0% APR, or lease-to-own through
+        Katapult with as low as $1 down and no credit required. Checking your eligibility takes about a minute
+        and won't affect your credit score.
+      </p>
+      <button class="finbanner__btn" type="button" id="finOpen">Get pre-qualified &amp; start your build today</button>
+      <div class="finbanner__lenders">
+        <span class="finbanner__label">Payment partners</span>
+        <span class="lender"><img src="images/affirm-logo.svg" alt="Affirm"></span>
+        <span class="lender lender--katapult"><img src="images/katapult-logo.png" alt="Katapult"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINANCING MODAL ===================== -->
+<div class="modal" id="finModal" role="dialog" aria-modal="true" aria-labelledby="finModalTitle">
+  <div class="modal__scrim" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__x" type="button" data-close aria-label="Close financing options">&#10005;</button>
+    <div class="modal__k">Buy now, pay later</div>
+    <h2 class="modal__t" id="finModalTitle">Two ways to pay over time.</h2>
+    <p class="modal__p">
+      Check your eligibility with no impact to your credit score. You'll get a decision in seconds and see
+      your exact terms before you commit. Pick the one that fits and start ordering parts.
+    </p>
+    <div class="fin">
+      <div class="fincard">
+        <div class="fincard__logo"><span class="lender"><img src="images/affirm-logo.svg" alt="Affirm"></span></div>
+        <span class="pill">As low as 0% APR</span>
+        <h3>Build. Pay monthly.</h3>
+        <p>
+          Finance the whole build through Custom Offsets: wheels, tires, suspension, lighting, performance,
+          and cooling parts on one approval. As low as 0% APR for qualified buyers, with predictable monthly payments and
+          no late fees or hidden fees.
+        </p>
+        <a class="btn btn--primary" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Pre-qualify with Affirm</a>
+      </div>
+      <div class="fincard">
+        <div class="fincard__logo"><span class="lender lender--katapult"><img src="images/katapult-logo.png" alt="Katapult"></span></div>
+        <span class="pill">As low as $1 down</span>
+        <h3>No credit required.</h3>
+        <p>
+          Katapult's lease-to-own option gets the parts on your truck for as low as $1 down, with a decision
+          in seconds and no credit required. It's built for buyers who are still establishing or rebuilding credit.
+        </p>
+        <a class="btn btn--primary" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Pre-qualify with Katapult</a>
+      </div>
+    </div>
+    <p class="finnote">Your rate will be 0% APR or 10 to 36% APR based on credit, and is subject to an eligibility check. Payment options through Affirm are provided by these lending partners: <a href="https://www.affirm.com/lenders" target="_blank" rel="noopener">affirm.com/lenders</a>. Options depend on your purchase amount, and a down payment may be required. Katapult is a lease-to-own program with its own terms, not a loan. Learn more about payment options at Custom Offsets.</p>
+  </div>
+</div>
+
+<!-- ===================== PARTS =====================
+     Every .pcard__img below is a CSS placeholder. Swap the .ph block for
+     <img src="images/part-xx.jpg" alt="..."> and nothing else changes.
+     LINKS: category level only for now. Eight of these have Custom Offsets
+     part numbers and need their direct product URLs pulled before launch. -->
+<section class="sec parts" id="parts">
+  <div class="wrap wrap--wide">
+    <div class="rv">
+      <div class="kicker">Every part on the truck</div>
+      <h2 class="display">Full parts list.</h2>
+      <p class="lede" style="margin-top:20px">
+        Everything that went on the 2006 Sierra, grouped the way it went on the truck; filter by category
+        to see one group at a time.
+      </p>
+      <div class="ptabs" role="tablist" aria-label="Parts categories">
+        <button class="ptab" role="tab" aria-selected="true" data-cat="all">All Parts</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="wt">Wheels &amp; Tires</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="susp">Suspension</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="perf">Performance</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="cool">Cooling</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="light">Lighting</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="int">Interior</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="drive">Drivetrain</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="ext">Exterior</button>
+      </div>
+    </div>
+
+    <div class="carousel rv">
+      <button class="carousel__arrow carousel__arrow--prev" type="button" id="pgPrev" aria-label="Previous parts"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+    <div class="pgrid" id="pgrid">
+      <article class="pcard rv" data-cat="wheel">
+        <div class="pcard__img"><img src="images/part-arkon.webp" alt="Chrome ARKON Off-Road Lincoln 26x14 wheel mounted on the truck" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">ARKON Off-Road</div>
+          <div class="pcard__t">Lincoln 26x14 -81</div>
+          <p class="pcard__p">A 26x14 at a -81 offset, in chrome. That much width at that much negative offset puts the wheel face well outside the stock fender line.</p>
+          <div class="pcard__price pcard__price--top num">$799.00<em>each</em></div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/buy-wheel-offset2/K10926408343/CVPGTS19/arkon-off-road-lincoln-26x14-81-venom-power-ragnarok-gts-305-30zr26?vehicle_type=Truck&amp;year=2006&amp;make=GMC&amp;model=Sierra+1500&amp;trim=SLT&amp;drive=4WD&amp;modification=Minor+Plastic+Trimming&amp;rubbing=No+rubbing+or+scrubbing&amp;suspension=Suspension+Lift+3%22&amp;packageFlow=true&amp;qty=4" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/store/wheels" target="_blank" rel="noopener">Shop Wheels</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="tire">
+        <div class="pcard__img pcard__img--product"><img src="images/part-venom.webp" alt="Venom Power Terra Hunter R/T Plus 33x14.50R26LT tire" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Venom Power</div>
+          <div class="pcard__t">Terra Hunter R/T Plus 33x14.50R26LT</div>
+          <p class="pcard__p">A rugged terrain tire, 33 tall and 14.5 wide, on the 26x14. Short sidewall over a wide tread face, with an RT block pattern that still reads as a truck tire up close.</p>
+          <div class="pcard__price pcard__price--top num">$538.35<em>each</em></div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/buy-wheel-offset2/CVPRT21/venom-power-terra-hunter-r-t-plus-33x1450r26lt-tires?suspension=Stock" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/store/tires" target="_blank" rel="noopener">Shop Tires</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="susp">
+        <div class="pcard__img pcard__img--product"><img src="images/part-rc-front.webp" alt="Rough Country M1 monotube front shocks" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Rough Country</div>
+          <div class="pcard__t">M1 Monotube Front Shocks</div>
+          <p class="pcard__p">Monotube front shocks. A monotube keeps the gas and the oil separated, so it resists fade better than the factory twin tube under the extra unsprung weight of a 26in wheel.</p>
+          <div class="pcard__price pcard__price--top num">$179.95</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/store/suspension/115748/rough-country-m1-front-shocks-0-3-99-07-chevy-gmc-silverado-sierra-1500-classic" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/store/suspension" target="_blank" rel="noopener">Shop Suspension</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="susp">
+        <div class="pcard__img pcard__img--product"><img src="images/part-rc-rear.webp" alt="Rough Country M1 monotube rear shocks" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Rough Country</div>
+          <div class="pcard__t">M1 Monotube Rear Shocks</div>
+          <p class="pcard__p">The rear half of the same M1 set. Matching damping front to rear keeps a leveled half ton settled instead of porpoising on throttle.</p>
+          <div class="pcard__price pcard__price--top num">$179.95</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/store/suspension/115720/rough-country-m1-monotube-rear-shocks-25-6-99-07-chevy-gmc-silverado-sierra-1500-classic" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/store/suspension" target="_blank" rel="noopener">Shop Suspension</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="susp">
+        <div class="pcard__img pcard__img--product"><img src="images/part-rc-uca.jpg" alt="Rough Country forged upper control arms" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Rough Country</div>
+          <div class="pcard__t">Upper Control Arms</div>
+          <p class="pcard__p">Replacement upper control arms. Stock arms run out of camber adjustment once the front end comes up, and these put the alignment back in range.</p>
+          <div class="pcard__price pcard__price--top num">$339.95</div>
+          <div class="pcard__acts">
+            <a class="a2" href="https://www.customwheeloffset.com/store/suspension" target="_blank" rel="noopener">Shop Suspension</a>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="pcard rv" data-cat="susp">
+        <div class="pcard__img pcard__img--product"><img src="images/part-bds-traction.webp" alt="BDS Suspension fixed traction bars with hardware" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">BDS Suspension</div>
+          <div class="pcard__t">Traction Bars</div>
+          <p class="pcard__p">Traction bars to stop the rear axle from wrapping the leaf springs under power. On a boosted leaf-sprung half ton, that wrap is what breaks driveshafts.</p>
+          <div class="pcard__price pcard__price--top num">$624.95</div>
+          <div class="pcard__acts">
+            <a class="a2" href="https://www.customwheeloffset.com/store/suspension" target="_blank" rel="noopener">Shop Suspension</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="perf">
+        <div class="pcard__img"><img src="images/part-procharger.webp" alt="ProCharger head unit and intercooler plumbing in the engine bay" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">ProCharger</div>
+          <div class="pcard__t">High Output Intercooled Tuner Kit</div>
+          <p class="pcard__p">A centrifugal supercharger kit for the GM 6.0, intercooled, with the head unit, brackets and plumbing in the box. Tuner kit means the calibration is handled separately.</p>
+          <div class="pcard__price pcard__price--top num">$6,549.00</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/store/performance/727495/procharger-high-output-intercooled-tuner-kit-supercharger-gm-truck-gm-suv-2003-2007" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/store/performance" target="_blank" rel="noopener">Shop Performance</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="perf">
+        <div class="pcard__img pcard__img--product"><img src="images/part-injectors.webp" alt="Set of eight DeatschWerks 630cc fuel injectors with wiring adapters" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">DeatschWerks</div>
+          <div class="pcard__t">630cc Fuel Injectors, Set of 8</div>
+          <p class="pcard__p">Eight 630cc injectors, 60 lb/hr, with the adapter harnesses for a 2000 to 2006 Silverado or Sierra. Factory injectors run out of duty cycle under boost long before the engine runs out of air.</p>
+          <div class="pcard__price pcard__price--top num">$489.00</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/store/performance/279715/deatschwerks-630cc-set-of-8-fuel-60lb-hr-injectors-chevrolet-silverado-sierra-2000-2006" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/store/performance" target="_blank" rel="noopener">Shop Performance</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="perf">
+        <div class="pcard__img pcard__img--product"><img src="images/part-dw400.webp" alt="DeatschWerks DW400 pump module with lines and fittings" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">DeatschWerks</div>
+          <div class="pcard__t">DW400 Pump Module</div>
+          <p class="pcard__p">A 400 lph pump module that drops into the factory tank location. The stock pump cannot hold rail pressure under boost.</p>
+          <div class="pcard__price pcard__price--top num">$1,129.00</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/store/performance/281923/deatschwerks-dw400-pump-module" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/store/performance" target="_blank" rel="noopener">Shop Performance</a>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="pcard rv" data-cat="cool">
+        <div class="pcard__img pcard__img--product"><img src="images/part-mishi-rad.webp" alt="Mishimoto performance aluminum radiator" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Mishimoto</div>
+          <div class="pcard__t">Performance Radiator</div>
+          <p class="pcard__p">A larger core to hold coolant temperature on a truck that idles in a show field all afternoon and then gets driven hard.</p>
+          <div class="pcard__price pcard__price--top pcard__price--ask">Check availability</div>
+          <div class="pcard__acts">
+            <a class="a2" href="https://www.customwheeloffset.com/store/performance" target="_blank" rel="noopener">Shop Performance</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="cool">
+        <div class="pcard__img pcard__img--product"><img src="images/part-mishi-trans.webp" alt="Mishimoto performance transmission cooler" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Mishimoto</div>
+          <div class="pcard__t">Transmission Cooler</div>
+          <p class="pcard__p">Transmission fluid is the first thing to overheat behind a blower, and the factory automatic has no margin left once boost is involved.</p>
+          <div class="pcard__price pcard__price--top pcard__price--ask">Check availability</div>
+          <div class="pcard__acts">
+            <a class="a2" href="https://www.customwheeloffset.com/store/performance" target="_blank" rel="noopener">Shop Performance</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="light">
+        <div class="pcard__img pcard__img--product"><img src="images/part-specd-head.webp" alt="Spec-D dual halo projector headlights and bumper lights" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Spec-D Tuning</div>
+          <div class="pcard__t">Headlights</div>
+          <p class="pcard__p">New headlight housings for the 1999 to 2006 body. Factory lenses on a twenty-year-old truck are hazed no matter how well it was kept.</p>
+          <div class="pcard__price pcard__price--top num">$191.69</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/store/lighting/207902/spec-d-tuning-spec-d-dual-halo-projector-headlights-bumper-lights-glossy-black-housing-smoked-lens" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/store/lighting" target="_blank" rel="noopener">Shop Lighting</a>
+          </div>
+        </div>
+      </article>
+
+
+
+      <article class="pcard rv" data-cat="light">
+        <div class="pcard__img pcard__img--product"><img src="images/part-cu-wheel.webp" alt="Customs Unlimited 20 row ultra high intensity wheel light rings" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Customs Unlimited</div>
+          <div class="pcard__t">Wheel Ring Lights</div>
+          <p class="pcard__p">LED rings that mount behind the spokes and light the wheel face from the inside.</p>
+          <div class="pcard__price pcard__price--top num">$855.00</div>
+          <div class="pcard__acts">
+            <a class="a2" href="https://www.customwheeloffset.com/store/lighting" target="_blank" rel="noopener">Shop Lighting</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="light">
+        <div class="pcard__img"><img src="images/part-framelight.webp" alt="Lit LED frame light strip mounted along the frame rail under the truck" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Customs Unlimited</div>
+          <div class="pcard__t">Frame Lights</div>
+          <p class="pcard__p">Lighting runs down the frame rails to throw light under the full length of the truck.</p>
+          <div class="pcard__price pcard__price--top num">$249.99</div>
+          <div class="pcard__acts">
+            <a class="a2" href="https://www.customwheeloffset.com/store/lighting" target="_blank" rel="noopener">Shop Lighting</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="light">
+        <div class="pcard__img pcard__img--product"><img src="images/part-cu-rock.webp" alt="Customs Unlimited 144 LED blazing rock light pod" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Customs Unlimited</div>
+          <div class="pcard__t">Rock Lights</div>
+          <p class="pcard__p">Rock lights under the body, to light up the frame overlays.</p>
+          <div class="pcard__price pcard__price--top num">$285.00</div>
+          <div class="pcard__acts">
+            <a class="a2" href="https://www.customwheeloffset.com/store/lighting/rock-lights" target="_blank" rel="noopener">Shop Lighting</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="int">
+        <div class="pcard__img"><img src="images/part-headliner.webp" alt="Lit fiber optic starlight headliner inside the cab" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Customs Unlimited</div>
+          <div class="pcard__t">Starlight Headliner</div>
+          <p class="pcard__p">Fiber optic strands run by hand into the headliner, lit to read like a night sky. Four of the eleven days went into this one job.</p>
+          <div class="pcard__price pcard__price--top num">$382.50</div>
+          <div class="pcard__acts">
+            <a class="a2" href="https://www.customwheeloffset.com/store/lighting" target="_blank" rel="noopener">Shop Lighting</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="drive">
+        <div class="pcard__img pcard__img--product"><img src="images/part-bm-diff.webp" alt="B&amp;M cast aluminum differential cover, black" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">B&amp;M</div>
+          <div class="pcard__t">Cast Aluminum Differential Cover</div>
+          <p class="pcard__p">A finned cast aluminum cover for the rear end. It holds more fluid than the stamped factory cover and sheds more heat.</p>
+          <div class="pcard__price pcard__price--top num">$425.95</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/store/performance/234050/bm-cast-aluminum-differential-cover-for-gm-95-14-bolt-black" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/store/performance/driveline/diff-covers" target="_blank" rel="noopener">Shop Drivetrain</a>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="pcard rv" data-cat="ext">
+        <div class="pcard__img"><img src="images/day-d9.webp" alt="Coated frame overlays and strut plates fitted under the truck" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">419 Fab</div>
+          <div class="pcard__t">Frame Overlays &amp; Strut Plates</div>
+          <p class="pcard__p">Overlays and strut plates that went out to powder coat on Day 3. They are here to dress up the truck and give it some style, because on a truck sitting this high everything under it is on display.</p>
+          <div class="pcard__price pcard__price--top pcard__price--ask">Check availability</div>
+          <div class="pcard__acts">
+            <a class="a2" href="https://www.customwheeloffset.com/store/exterior" target="_blank" rel="noopener">Shop Exterior</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="ext">
+        <div class="pcard__img pcard__img--product"><img src="images/part-boost-mirrors.png" alt="Boost Auto Parts classic GM tow mirrors" loading="lazy"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Boost Auto Parts</div>
+          <div class="pcard__t">Tow Mirrors</div>
+          <p class="pcard__p">Tow mirrors that replace the factory units and extend the mirror face out past the body line.</p>
+          <div class="pcard__price pcard__price--top num">$339.85<em>from</em></div>
+          <div class="pcard__acts">
+            <a class="a2" href="https://www.customwheeloffset.com/store/exterior-accessories" target="_blank" rel="noopener">Shop Exterior</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+      <button class="carousel__arrow carousel__arrow--next" type="button" id="pgNext" aria-label="Next parts"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+    </div>
+
+    <div class="pager rv" id="pager" hidden>
+      <div class="pager__info">Page <b id="pgNow">1</b> of <b id="pgTotal">1</b> <span id="pgCount"></span></div>
+      <div class="pager__dots" id="pgDots"></div>
+    </div>
+
+    <div class="shopall rv" style="text-align:center">
+      <a class="btn btn--primary" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop all parts</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VIDEO ===================== -->
+<section class="sec video" id="watch">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Watch it now</div>
+      <h2 class="display">Watch the build.</h2>
+      <p class="lede" style="margin-top:20px">
+        From teardown to show ready: every part that went on the truck, every late night in the shop, and the
+        last bolt going in on the morning it had to leave for Tennessee.
+      </p>
+    </div>
+    <div class="vidbox rv">
+      <div class="vidbox__ph">
+        <div class="playmark" aria-hidden="true"></div>
+        <div class="label" style="color:var(--text)">YouTube embed goes here</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STORY ===================== -->
+<section class="sec" id="story">
+  <div class="story__bg" aria-hidden="true">
+    <img src="images/story-bg.webp" alt="" loading="lazy">
+  </div>
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">The build story</div>
+      <h2 class="display">A $12,000 truck.<br>One diesel show.</h2>
+      <div class="byline">Custom Offsets Build Team . 5 Min Read</div>
+    </div>
+    <div class="prose rv">
+      <p>
+        The brief was short: find a cheap truck, build something that can lay rubber and look right doing it,
+        and have it on a trailer in eleven days, in time for <strong>FP Truck Fest 6.0</strong>.
+      </p>
+      <p>
+        We wanted to be into the truck for under ten thousand dollars, and we paid <strong>$12,000</strong>
+        on Facebook Marketplace. That difference is the Wisconsin rust tax, and anybody who has shopped for a
+        twenty-year-old truck in this part of the country knows the number before they open the listing.
+      </p>
+
+      <h3>The truck</h3>
+      <p>
+        The truck is a <strong>2006 GMC Sierra 1500 SLT</strong> with the VortecMAX 6.0 under the hood. The
+        LQ9 is a cheap, stout, over-square V8 that takes boost without much convincing, and there are
+        more of them sitting in salvage yards than almost anything else GM built; that matters when the budget
+        is the whole point.
+      </p>
+      <p>
+        SLT trim is the reason a starlight headliner made the list at all. Strip a base truck and you are
+        looking at a rubber floor and a bench seat; strip this one and there was something worth building
+        back into.
+      </p>
+
+      <h3>Why a 6.0 going to a 6.0</h3>
+      <p>
+        The show is <strong>FP Truck Fest 6.0</strong>, run by Fitzgerald Performance on their own property on
+        Commerce Drive in Jamestown, Tennessee, and the truck is a 6.0. Once that connection was made, the
+        truck picked itself.
+      </p>
+      <p>
+        It also meant arriving at a diesel show with a gas truck, which was never a problem; it was the point.
+        FP bills itself as the rowdiest diesel show in the country and has the numbers to support it: four
+        hundred trucks in the judged Gold Lot out of more than twenty-five hundred applications, a Silver Lot
+        that sold out in about two minutes, and a Chaos Pass capped at fifty vehicles for the entire event.
+        Custom Offsets sponsors burnout alley, so we were going to be at this one either way. The only question
+        was what we rolled in with.
+      </p>
+
+      <h3>What we changed</h3>
+      <p>
+        <strong>Forced induction</strong> was the headline, and it brought its own shopping list: larger
+        injectors, a bigger fuel pump in the tank, and a tune to make the three of them agree. Mishimoto
+        cooling went on because boost makes heat, and a 2006 half ton was never built expecting any of it.
+      </p>
+      <p>
+        The <strong>Starlight headliner</strong> took four straight days. The fiber was run into the headliner
+        by hand, one strand at a time, with the truck gutted the entire time. We knew going in that it was the
+        long job, so it started first and ran in the background while everything else went on around it. It is
+        also the first thing anybody asks to sit in and look at.
+      </p>
+      <p>
+        The rest was stance and light: <strong>26x14 ARKON Lincolns</strong> on 33x14.50 Venom Power Terra Hunter R/T Plus,
+        leveling keys and upper control arms to make them sit the way they should, and Customs Unlimited
+        lighting in the wheels, down the frame, and under the wheel arches.
+      </p>
+
+      <h3>Where the money went</h3>
+      <p>
+        The forced induction system is the headline at <span class="num">$6,549.00</span>, which is more than
+        half of what the truck cost. It took <strong>DeatschWerks injectors</strong> at <span class="num">$489.00</span>,
+        a <strong>bigger fuel pump</strong> at <span class="num">$1,129.00</span>, and
+        <span class="num">$1,682.00</span> in tune, plugs and fuel before it made a single clean pull.
+      </p>
+      <p>
+        The rest was spread thin and spent on looks, along with <span class="num">$425.95</span> for a
+        B&amp;M differential cover on the rear axle that nobody will ever notice at a show.
+      </p>
+
+      <h3>Getting it there</h3>
+      <p>
+        Powder coat is the one job you cannot recover by working later, so it went out early and came back when
+        the shop was finished with it. The suspension waited on the powder coat, and the wheels waited on the
+        suspension.
+      </p>
+      <p>
+        We were still working on the truck at <strong>1am on the morning it had to leave</strong>. That is the
+        honest version of a show deadline, and it is the one nobody puts in the build video. If you are doing
+        this at home, start the slow jobs first. The headliner and the powder coat should have gone out on
+        day one.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec faqsec" id="faq">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Straight answers</div>
+      <h2 class="display">Questions we get<br>on builds like this.</h2>
+    </div>
+    <div class="faq rv">
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">What is FP Truck Fest 6.0?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p>FP Truck Fest is Fitzgerald Performance's own show, held on their property on Commerce Drive in Jamestown, Tennessee, and 6.0 was the sixth running. It is two days on a single ticket, with three vendor zones, a dirt track, a burnout pit, and sled pulls added for the first time this year with $20,000 going to the Hot Street winner. Four hundred trucks make the judged Gold Lot out of more than twenty-five hundred applications, and the Silver Lot sold out in about two minutes.</p></div>
+      </div>
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">Why bring a gas truck to a diesel show?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p>Because it is a 6.0 going to FP 6.0. Beyond that, a boosted VortecMAX makes the kind of noise and smoke that works in that crowd, and it does so for a fraction of what a built diesel costs to reach the same place. Nobody at the gate asked us to leave.</p></div>
+      </div>
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">What did the truck cost before parts?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p>The truck cost $12,000 on Facebook Marketplace, and we had been trying to stay under ten. In Wisconsin, a clean twenty-year-old half ton with a 6.0 carries a rust-free tax, and that tax was the extra two thousand.</p></div>
+      </div>
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">What took the longest?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p>The Starlight headliner, by a wide margin. Four straight days of running fiber by hand with the truck gutted. We knew it was going to eat the clock, so we started it first and worked around it, which is the only reason it did not hold anything else up.</p></div>
+      </div>
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">Will 26x14 fit a half ton without a lift?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p>This truck runs ARKON Lincoln 26x14 at -81 on 33x14.50R26 Venom Power Terra Hunter R/T Plus over leveling keys, upper control arms, and M1 shocks. Run your own year, make, and model through the fitment gallery before you order anything this wide, because the answer changes with trim, ride height, and how much trimming you are willing to do.</p></div>
+      </div>
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">Could I build this same truck?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p>Yes, and cheaper if you give yourself more than eleven days. The order matters: slow jobs first, so the headliner and the powder coat go out before you touch anything else; then suspension and wheels, because those set the stance everything else is measured against; and performance last, because forced induction is the one item on this list you can add after the truck is already a truck.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BLOGS ===================== -->
+<section class="sec blogs" id="blogs">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Latest from the garage</div>
+      <h2 class="display">Build knowledge.<br>Straight from Custom Offsets.</h2>
+      <p class="lede" style="margin-top:20px">
+        Build guides, brand breakdowns, and behind-the-scenes work from the Custom Offsets team; real
+        fitment, real builds, and real opinions, with no filler.
+      </p>
+    </div>
+    <div class="bgrid">
+      <a class="bcard rv" href="https://www.customwheeloffset.com/blogs/1635/what-wheels-and-tires-best-fit-a-1999-2006-gmc-sierra-1500" target="_blank" rel="noopener">
+        <div class="bcard__img"><img src="images/blog-sierra-fitment.jpg" alt="Front view of a black 1999-2006 GMC Sierra on oversized mud tires with an Iron Cross front bumper" loading="lazy"></div>
+        <div class="bcard__body">
+          <div class="bcard__cat">Fitment Guides</div>
+          <div class="bcard__t">What Wheels and Tires Best Fit a 1999-2006 GMC Sierra 1500?</div>
+          <div class="bcard__m">Custom Offsets . July 17, 2024</div>
+        </div>
+      </a>
+      <a class="bcard rv" href="https://www.customwheeloffset.com/blogs/1892/best-suspension-mods-for-your-gmc-sierra-1500" target="_blank" rel="noopener">
+        <div class="bcard__img"><img src="images/blog-sierra-suspension.jpg" alt="A black current-generation GMC Sierra 1500, leveled, on black off-road wheels" loading="lazy"></div>
+        <div class="bcard__body">
+          <div class="bcard__cat">Suspension</div>
+          <div class="bcard__t">Best Suspension Mods for Your GMC Sierra 1500</div>
+          <div class="bcard__m">Custom Offsets . March 27, 2025</div>
+        </div>
+      </a>
+      <a class="bcard rv" href="https://www.customwheeloffset.com/blogs/1901/what-s-the-best-stance-for-your-truck" target="_blank" rel="noopener">
+        <div class="bcard__img"><img src="images/blog-stance.jpg" alt="A lifted red GMC Sierra 1500 on red and black wheels" loading="lazy"></div>
+        <div class="bcard__body">
+          <div class="bcard__cat">Stance</div>
+          <div class="bcard__t">What&rsquo;s the Best Stance for Your Truck?</div>
+          <div class="bcard__m">Custom Offsets . April 3, 2025</div>
+        </div>
+      </a>
+    </div>
+    <div style="margin-top:30px">
+      <a class="btn btn--ghost" href="https://www.customwheeloffset.com/blogs?tag=Sierra" target="_blank" rel="noopener">See all Sierra blogs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEXT STEP ===================== -->
+<section class="sec next">
+  <div class="wrap next__in">
+    <div class="kicker kicker--p kicker--c">Your truck is next</div>
+    <h2 class="display">Start your build.</h2>
+    <p class="lede" style="text-align:center">
+      Run your truck through the fitment gallery, see this setup on your exact year and trim before you spend
+      a dollar, and order the whole build at once.
+    </p>
+    <div class="trust">Build it right. <span>See it first.</span> Trust the fit.</div>
+    <div class="next__row">
+      <a class="btn btn--primary" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Start your build at Custom Offsets</a>
+      <a class="btn btn--ghost" href="#meter">Back to the build</a>
+    </div>
+  </div>
+  <div class="closer rv">
+    <img src="images/footer-night.webp" alt="The finished truck in profile on 26x14 ARKONs, coated suspension showing underneath" loading="lazy">
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <nav class="foot__links" aria-label="Contact">
+      <a href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">customwheeloffset.com</a>
+      <a href="tel:9202210110">920-221-0110</a>
+    </nav>
+    <p class="foot__legal">
+      &copy; 2026 Custom Offsets. All product names and trademarks are the property of their respective owners. Pricing shown is approximate and subject to change. Financing through Affirm subject to approval. Katapult is a lease-to-own option with its own terms.
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
