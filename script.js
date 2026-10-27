@@ -38,7 +38,7 @@
       cat:"Day 4 through 7", name:"Starlight & Performance",
       brand:"The headliner went in while the engine came together underneath it",
       went:"Four straight days went into running fiber by hand into the Starlight headliner while the performance upgrade was assembled underneath it.",
-      why:"A gutted truck is the only time the headliner and the engine bay are both wide open, and neither job rewards hurrying. The performance upgrade never arrives alone either. It needs fuel and spark to match, and that is a second order with its own lead time.",
+      why:"With the truck gutted, we had the headliner and the engine bay wide open at the same time, which doesn\u2019t happen often. We took our time on both. We also learned that a performance upgrade never comes alone. Adding power meant upgrading fuel and ignition to match, and those parts came as a separate order with their own lead time.",
       fought:"Hundreds of individual strands, each placed by hand, and four days in the headliner meant four days away from the rest of the truck."
     },
     {
