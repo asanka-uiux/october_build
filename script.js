@@ -182,6 +182,27 @@
     return b;
   }
 
+  function peer(i){
+    var d = DAYS[i];
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'dayhero dayhero--peer' + (d.last ? ' dayhero--last' : '');
+    b.dataset.i = i;
+    b.setAttribute('aria-label', d.label + ', ' + d.name);
+    b.innerHTML =
+      '<span class="dayhero__tag" aria-hidden="true">' + (d.last ? 'Jamestown, TN' : '') + '</span>' +
+      '<span class="dayhero__face"><span class="dayhero__in">' +
+        '<span class="dayhero__head"><span class="dayhero__hk">' + (d.head || 'Day') + '</span></span>' +
+        '<span class="dayhero__strip"></span>' +
+        '<span class="dayhero__body"><span class="dayhero__n' + (d.num.length > 2 ? ' dayhero__n--wide' : '') + '">' + d.num + '</span></span>' +
+        '<span class="dayhero__foot"><span class="dayhero__rule"></span><span class="dayhero__t">' + d.short + '</span></span>' +
+        '<span class="dayhero__cta" aria-hidden="true"><span>Open this day</span></span>' +
+      '</span></span>';
+    b.addEventListener('click', function(){ pick(i); });
+    b.addEventListener('keydown', navKeys(i));
+    return b;
+  }
+
   function navKeys(i){
     return function(e){
       var n = null;
@@ -199,8 +220,9 @@
   function renderSides(){
     var n = sideCount();
     sideL.innerHTML = ''; sideR.innerHTML = '';
-    for (var i = Math.max(0, SEL - n); i < SEL; i++) sideL.appendChild(tile(i, SEL - i, -1));
-    for (var j = SEL + 1; j <= Math.min(DAYS.length - 1, SEL + n); j++) sideR.appendChild(tile(j, j - SEL, 1));
+    var make = swipe() ? function(k){ return peer(k); } : tile;
+    for (var i = Math.max(0, SEL - n); i < SEL; i++) sideL.appendChild(make(i, SEL - i, -1));
+    for (var j = SEL + 1; j <= Math.min(DAYS.length - 1, SEL + n); j++) sideR.appendChild(make(j, j - SEL, 1));
     // reserve the same width on both sides so the hero stays dead centre
     // even on day 1 or day 11, when one side has nothing in it
     var w = 0;
@@ -213,10 +235,63 @@
   }
 
   function centerHero(smooth){
-    if (!swipe()) return;
+    if (!swipe()){ applyScale(); return; }
     var s = el('daystage');
     s.scrollTo({ left: hero.offsetLeft + hero.offsetWidth / 2 - s.clientWidth / 2, behavior: smooth && !REDUCE ? 'smooth' : 'auto' });
+    applyScale();
   }
+
+  /* Phones: every card's size and fade follow its distance from the middle of
+     the row, read straight off the scroll position, so they track the finger.
+     Uses the CSS `scale` property so it stacks with the pop spring's transform. */
+  function applyScale(){
+    var s = el('daystage');
+    var cards = s.querySelectorAll('.dayhero');
+    if (!swipe()){
+      for (var k = 0; k < cards.length; k++){ cards[k].style.scale = ''; cards[k].style.opacity = ''; cards[k].style.zIndex = ''; }
+      return;
+    }
+    var step = cards.length > 1 ? Math.abs(cards[1].offsetLeft - cards[0].offsetLeft) : 1;
+    var mid = s.scrollLeft + s.clientWidth / 2;
+    for (var i = 0; i < cards.length; i++){
+      var c = cards[i];
+      var d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid) / step;
+      var near = Math.min(1, d), far = Math.max(0, Math.min(1, d - 1));
+      c.style.scale = (1 - 0.5 * near).toFixed(4);
+      c.style.opacity = (1 - 0.35 * near - 0.35 * far).toFixed(3);
+      c.style.zIndex = d < 0.5 ? 3 : 1;
+    }
+  }
+
+  // when a swipe comes to rest, the card in the middle becomes the selected day
+  function settle(){
+    if (!swipe()) return;
+    var s = el('daystage'), mid = s.scrollLeft + s.clientWidth / 2;
+    var cards = s.querySelectorAll('.dayhero'), best = null, bd = Infinity;
+    for (var i = 0; i < cards.length; i++){
+      var d = Math.abs(cards[i].offsetLeft + cards[i].offsetWidth / 2 - mid);
+      if (d < bd){ bd = d; best = cards[i]; }
+    }
+    if (!best || best === hero) return;
+    var n = +best.dataset.i;
+    var refocus = document.activeElement === best;
+    SEL = n;
+    fillHero();
+    renderSides();
+    centerHero(false);
+    fillPanel();
+    measure(true);
+    if (OPEN){ swapSp.snap(0); swapSp.to(1, CFG.open); run(); }
+    if (refocus) hero.focus({ preventScroll: true });
+  }
+
+  var scrollRaf = 0, settleT;
+  el('daystage').addEventListener('scroll', function(){
+    if (!swipe()) return;
+    if (!scrollRaf) scrollRaf = requestAnimationFrame(function(){ scrollRaf = 0; applyScale(); });
+    clearTimeout(settleT);
+    settleT = setTimeout(settle, 140);
+  }, { passive: true });
 
   function fillHero(){
     var d = DAYS[SEL];
@@ -352,6 +427,7 @@
   // boot: the hero shows day one, shut, waiting to be opened
   fillHero();
   renderSides();
+  centerHero(false);
   fillPanel();
   panel.toggleAttribute('inert', true);
   measure(false);
