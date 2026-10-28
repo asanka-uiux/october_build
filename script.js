@@ -3,14 +3,14 @@
 
   /* ============================================================
      THE BUILD, DAY BY DAY
-     Seven cards cover eleven days: 1 and 2 were one teardown, and 4
-     through 7 were one unbroken run at the headliner and the engine.
+     Seven cards: six cover the ten build days (1 and 2 were one teardown, and 4
+     through 7 were one unbroken run at the headliner and the engine), and the last is show day.
      days[] drives the clock pips, the badge and the days-left
      readout, so re-splitting a card fixes all three at once.
      show:true swaps the last card into the FP 6.0 finale, which gets
      its own row labels and a photo strip underneath.
      ============================================================ */
-  var LAST_DAY = 11;
+  var LAST_DAY = 10;
   var ROW_LABELS = ["What went on", "Why it happened on this day", "What slowed it down"];
 
   var DAYS = [
@@ -56,7 +56,7 @@
       cat:"Day 9", name:"Suspension & Headlights",
       brand:"The coated parts come home",
       went:"Leveling keys, upper control arms, M1 shocks front and rear, and the Spec-D headlights all went on in a single day.",
-      why:"The powder coat came back on Day 9, and none of the suspension could go in until it did; everything that sets the stance of the truck happens here.",
+      why:"Day 9, the powder-coated suspension finally came back. Until then, it was a waiting game, since nothing could go in without it. This is the part that sets the stance, so it had to be right.",
       fought:"The suspension sat on the bench until the coated parts came back, so nothing that sets the stance could start until the oven was finished with them."
     },
     {
@@ -224,7 +224,7 @@
     for (var i = Math.max(0, SEL - n); i < SEL; i++) sideL.appendChild(make(i, SEL - i, -1));
     for (var j = SEL + 1; j <= Math.min(DAYS.length - 1, SEL + n); j++) sideR.appendChild(make(j, j - SEL, 1));
     // reserve the same width on both sides so the hero stays dead centre
-    // even on day 1 or day 11, when one side has nothing in it
+    // even on the first or last card, when one side has nothing in it
     var w = 0;
     if (n && !stacked()){
       var tw = tileWidth();
@@ -306,7 +306,7 @@
 
   function fillPanel(){
     var d = DAYS[SEL], lastDay = d.days[d.days.length - 1];
-    q('badge').textContent = d.days.length > 1
+    q('badge').textContent = d.show ? 'Show day' : d.days.length > 1
       ? 'Days ' + d.days[0] + ' to ' + lastDay + ' of ' + LAST_DAY
       : 'Day ' + d.days[0] + ' of ' + LAST_DAY;
     q('phb').textContent = d.label;

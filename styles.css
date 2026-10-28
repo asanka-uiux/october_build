@@ -206,9 +206,9 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .detail__brand{font-family:'Oswald',sans-serif;font-weight:500;font-size:.9rem;color:var(--muted);margin-top:8px}
 .detail__cta{margin-top:20px}
 
-/* the clock: eleven pips, one per day, counting what was left */
+/* the clock: ten pips, one per day, counting what was left */
 .clock{align-self:flex-start;margin-top:16px;padding:15px 20px 14px;border:1px solid var(--line);border-left:3px solid var(--red);border-radius:var(--r);background:rgba(206,17,38,.07);min-width:min(100%,360px)}
-.clock__scale{display:grid;grid-template-columns:repeat(11,1fr);gap:4px}
+.clock__scale{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}
 .clock__scale span{height:7px;border-radius:2px;background:rgba(255,255,255,.1);transition:background .35s,box-shadow .35s}
 .clock__scale span.on{background:linear-gradient(90deg,var(--red-deep),var(--red-hot));box-shadow:0 0 14px rgba(255,32,54,.5)}
 .clock__r{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-top:11px;flex-wrap:wrap}
